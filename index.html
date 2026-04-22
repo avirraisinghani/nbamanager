@@ -1200,6 +1200,21 @@ function renderLiveUI(){
   document.getElementById('live-away-city').textContent = isHome ? opp : S.team;
   document.getElementById('live-sub').textContent = `${isHome?'Home':'Away'} vs ${opp} · Game ${S.gamesPlayed+1} of 82`;
 
+  // Reset all game buttons to their default state for every new game
+  const advBtn = document.getElementById('advance-btn');
+  const simHalfBtn = document.getElementById('sim-half-btn');
+  const simFullBtn = document.getElementById('sim-full-btn');
+  advBtn.textContent = '▶ Advance';
+  advBtn.disabled = false;
+  advBtn.onclick = ()=>advanceGame();
+  simHalfBtn.textContent = '⏩ Sim Half';
+  simHalfBtn.disabled = false;
+  simHalfBtn.onclick = ()=>simToHalf();
+  simFullBtn.textContent = '⏭ Sim to End';
+  simFullBtn.disabled = false;
+  simFullBtn.onclick = ()=>simToEnd();
+  document.getElementById('live-indicator').style.display = '';
+
   updateScoreboard();
   updateBoxScore();
   renderSubPanel();
@@ -1654,13 +1669,18 @@ function endGame(){
   toast(`${won?'WIN':'LOSS'}! Final: ${lg.myScore}-${lg.oppScore} vs ${ROSTERS[lg.opp].abbr}`);
 
   setTimeout(()=>{
-    document.getElementById('advance-btn').textContent = '▶ Advance';
-    document.getElementById('advance-btn').disabled = false;
-    document.getElementById('advance-btn').onclick = ()=>nav('dashboard');
-    document.getElementById('sim-half-btn').disabled = false;
-    document.getElementById('sim-full-btn').disabled = false;
-    document.getElementById('sim-half-btn').textContent = '🏠 Back to Dashboard';
-    document.getElementById('sim-half-btn').onclick = ()=>nav('dashboard');
+    const advBtn = document.getElementById('advance-btn');
+    const simHalfBtn = document.getElementById('sim-half-btn');
+    const simFullBtn = document.getElementById('sim-full-btn');
+    advBtn.textContent = '▶ Next Game';
+    advBtn.disabled = false;
+    advBtn.onclick = ()=>nav('dashboard');
+    simHalfBtn.textContent = '🏠 Dashboard';
+    simHalfBtn.disabled = false;
+    simHalfBtn.onclick = ()=>nav('dashboard');
+    simFullBtn.textContent = '🏠 Dashboard';
+    simFullBtn.disabled = false;
+    simFullBtn.onclick = ()=>nav('dashboard');
   },1500);
 }
 
