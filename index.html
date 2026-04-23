@@ -19,7 +19,7 @@ html,body{background:var(--dark);color:var(--text);font-family:var(--fb);min-hei
 .app{display:flex;flex-direction:column;min-height:100vh;}
 
 /* TOPBAR */
-.topbar{background:var(--dark2);border-bottom:1px solid var(--border);padding:0 1.5rem;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;}
+.topbar{background:var(--dark2);border-bottom:1px solid var(--border);padding:0 1.5rem;height:44px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;}
 .logo{font-family:var(--fd);font-size:20px;font-weight:800;letter-spacing:2px;color:var(--accent);}
 .logo span{color:var(--muted2);font-weight:400;}
 .tb-stats{display:flex;align-items:center;gap:1.25rem;}
@@ -28,31 +28,31 @@ html,body{background:var(--dark);color:var(--text);font-family:var(--fb);min-hei
 
 /* LAYOUT */
 .main{flex:1;display:flex;}
-.sidebar{width:210px;background:var(--dark2);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;}
-.nav-section{padding:1rem 0 0.25rem 1rem;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);opacity:0.7;}
-.nav-item{display:flex;align-items:center;gap:9px;padding:9px 1rem;font-size:13px;color:var(--muted);cursor:pointer;border-left:3px solid transparent;transition:all 0.12s;user-select:none;}
+.sidebar{width:170px;background:var(--dark2);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;}
+.nav-section{padding:0.6rem 0 0.15rem 0.85rem;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);opacity:0.7;}
+.nav-item{display:flex;align-items:center;gap:8px;padding:7px 0.85rem;font-size:12px;color:var(--muted);cursor:pointer;border-left:3px solid transparent;transition:all 0.12s;user-select:none;}
 .nav-item:hover{color:var(--text);background:rgba(255,255,255,0.03);}
 .nav-item.active{color:var(--accent);border-left-color:var(--accent);background:var(--accentd);}
 .nav-item .ni{font-size:14px;width:16px;text-align:center;}
-.content{flex:1;padding:1.75rem;overflow-y:auto;min-width:0;}
+.content{flex:1;padding:0.9rem 1.1rem;overflow-y:auto;min-width:0;}
 .screen{display:none;animation:fadeIn 0.2s ease;}
 .screen.active{display:block;}
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
 
 /* TYPOGRAPHY */
-.page-title{font-family:var(--fd);font-size:32px;font-weight:800;letter-spacing:1px;margin-bottom:0.2rem;}
-.page-sub{font-size:13px;color:var(--muted);margin-bottom:1.75rem;}
-.sec-title{font-family:var(--fd);font-size:18px;font-weight:700;letter-spacing:0.5px;margin-bottom:0.75rem;}
+.page-title{font-family:var(--fd);font-size:24px;font-weight:800;letter-spacing:1px;margin-bottom:0.1rem;}
+.page-sub{font-size:12px;color:var(--muted);margin-bottom:0.75rem;}
+.sec-title{font-family:var(--fd);font-size:15px;font-weight:700;letter-spacing:0.5px;margin-bottom:0.4rem;}
 
 /* CARDS */
-.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.25rem;}
-.card-sm{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1rem;}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:0.85rem;}
+.card-sm{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:0.65rem;}
 
 /* TEAM PICKER */
-.conf-label{font-family:var(--fd);font-size:20px;font-weight:700;color:var(--accent);letter-spacing:1px;margin:1.25rem 0 0.5rem;}
+.conf-label{font-family:var(--fd);font-size:16px;font-weight:700;color:var(--accent);letter-spacing:1px;margin:0.6rem 0 0.3rem;}
 .div-label{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;padding-left:2px;}
-.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-bottom:1.5rem;}
-.team-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:0.9rem;cursor:pointer;transition:all 0.15s;position:relative;overflow:hidden;}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-bottom:0.75rem;}
+.team-card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:0.6rem;cursor:pointer;transition:all 0.15s;position:relative;overflow:hidden;}
 .team-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--tc,var(--accent));opacity:0;transition:opacity 0.15s;}
 .team-card:hover{border-color:var(--border2);background:var(--surface2);transform:translateY(-1px);}
 .team-card:hover::before{opacity:1;}
@@ -64,19 +64,19 @@ html,body{background:var(--dark);color:var(--text);font-family:var(--fb);min-hei
 .tc-fill{height:100%;border-radius:2px;background:var(--tc,var(--accent));}
 
 /* DASHBOARD */
-.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1.5rem;}
-.stat-box{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1rem;}
-.stat-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:6px;}
-.stat-val{font-family:var(--fd);font-size:30px;font-weight:700;letter-spacing:0.5px;}
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:0.75rem;}
+.stat-box{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:0.6rem 0.75rem;}
+.stat-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:3px;}
+.stat-val{font-family:var(--fd);font-size:24px;font-weight:700;letter-spacing:0.5px;}
 .stat-val.ac{color:var(--accent);}
 .stat-val.gr{color:var(--green);}
 .stat-val.re{color:var(--red);}
-.stat-val.sm{font-size:19px;margin-top:4px;}
+.stat-val.sm{font-size:16px;margin-top:2px;}
 
 /* ROSTER TABLE */
 .roster-table{width:100%;border-collapse:collapse;font-size:13px;}
-.roster-table th{text-align:left;padding:8px 12px;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);border-bottom:1px solid var(--border);background:rgba(255,255,255,0.015);font-weight:500;}
-.roster-table td{padding:9px 12px;border-bottom:1px solid var(--border);}
+.roster-table th{text-align:left;padding:5px 8px;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);border-bottom:1px solid var(--border);background:rgba(255,255,255,0.015);font-weight:500;}
+.roster-table td{padding:5px 8px;border-bottom:1px solid var(--border);}
 .roster-table tr:last-child td{border-bottom:none;}
 .roster-table tr:hover td{background:rgba(255,255,255,0.02);}
 .starter-row td{background:rgba(245,166,35,0.03);}
@@ -93,7 +93,7 @@ html,body{background:var(--dark);color:var(--text);font-family:var(--fb);min-hei
 .star{color:var(--accent);font-size:10px;margin-left:3px;}
 
 /* TACTICS/LINEUP */
-.court-wrap{background:#1a6b3a;border-radius:10px;padding:1.25rem;position:relative;overflow:hidden;height:420px;}
+.court-wrap{background:#1a6b3a;border-radius:10px;padding:1.25rem;position:relative;overflow:hidden;height:300px;}
 .court-lines{position:absolute;inset:0;pointer-events:none;}
 .court-lines svg{width:100%;height:100%;}
 .lineup-rows{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:space-around;height:100%;}
@@ -111,7 +111,7 @@ html,body{background:var(--dark);color:var(--text);font-family:var(--fb);min-hei
 .opt-btn.sel{border-color:var(--accent);color:var(--accent);background:var(--accentd);}
 
 /* SCHEDULE */
-.game-row{display:flex;align-items:center;padding:10px 14px;border-bottom:1px solid var(--border);transition:background 0.1s;cursor:pointer;}
+.game-row{display:flex;align-items:center;padding:6px 10px;border-bottom:1px solid var(--border);transition:background 0.1s;cursor:pointer;}
 .game-row:last-child{border-bottom:none;}
 .game-row:hover{background:rgba(255,255,255,0.02);}
 .game-gw{font-size:11px;color:var(--muted);width:32px;flex-shrink:0;}
@@ -132,27 +132,27 @@ html,body{background:var(--dark);color:var(--text);font-family:var(--fb);min-hei
 .gb{font-size:12px;color:var(--muted);}
 
 /* LIVE GAME */
-.live-wrap{display:grid;grid-template-columns:1fr 320px;gap:1.25rem;}
-.scoreboard{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem;text-align:center;margin-bottom:1rem;}
+.live-wrap{display:grid;grid-template-columns:1fr 260px;gap:0.75rem;}
+.scoreboard{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:0.75rem;text-align:center;margin-bottom:0.6rem;}
 .sb-teams{display:flex;align-items:center;justify-content:center;gap:2rem;margin-bottom:0.75rem;}
 .sb-team{text-align:center;flex:1;}
-.sb-abbr{font-family:var(--fd);font-size:28px;font-weight:800;color:var(--accent);}
+.sb-abbr{font-family:var(--fd);font-size:20px;font-weight:800;color:var(--accent);}
 .sb-city{font-size:11px;color:var(--muted);margin-top:2px;}
-.sb-score{font-family:var(--fd);font-size:72px;font-weight:800;letter-spacing:2px;color:var(--text);min-width:180px;line-height:1;}
+.sb-score{font-family:var(--fd);font-size:52px;font-weight:800;letter-spacing:2px;color:var(--text);min-width:140px;line-height:1;}
 .live-dot{display:inline-block;width:8px;height:8px;background:var(--red);border-radius:50%;margin-right:6px;animation:pulse 1s infinite;}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
 .quarter-info{font-size:13px;color:var(--muted);margin-top:0.5rem;}
-.progress-bar-wrap{background:rgba(255,255,255,0.05);border-radius:3px;height:4px;overflow:hidden;margin-top:1rem;}
+.progress-bar-wrap{background:rgba(255,255,255,0.05);border-radius:3px;height:4px;overflow:hidden;margin-top:0.5rem;}
 .progress-bar-fill{height:100%;background:var(--accent);border-radius:3px;transition:width 0.4s;}
-.boxscore-wrap{margin-top:1rem;}
+.boxscore-wrap{margin-top:0.5rem;}
 .bs-header{display:grid;grid-template-columns:1.5fr repeat(5,1fr);gap:4px;padding:6px 8px;font-size:10px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;}
-.bs-row{display:grid;grid-template-columns:1.5fr repeat(5,1fr);gap:4px;padding:7px 8px;border-bottom:1px solid var(--border);font-size:12px;align-items:center;}
+.bs-row{display:grid;grid-template-columns:1.5fr repeat(5,1fr);gap:4px;padding:4px 6px;border-bottom:1px solid var(--border);font-size:12px;align-items:center;}
 .bs-row:last-child{border-bottom:none;}
 .bs-row.on-court{background:rgba(245,166,35,0.04);}
 .bs-row.benched{opacity:0.5;}
 .bs-name{font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.live-log{height:340px;overflow-y:auto;display:flex;flex-direction:column-reverse;}
-.log-entry{padding:7px 10px;border-bottom:1px solid var(--border);font-size:12px;display:flex;align-items:center;gap:8px;}
+.live-log{height:220px;overflow-y:auto;display:flex;flex-direction:column-reverse;}
+.log-entry{padding:4px 8px;border-bottom:1px solid var(--border);font-size:12px;display:flex;align-items:center;gap:8px;}
 .log-entry:last-child{border-bottom:none;}
 .log-time{font-size:10px;color:var(--muted);min-width:40px;font-weight:600;}
 .log-icon{font-size:14px;min-width:18px;}
@@ -164,7 +164,7 @@ html,body{background:var(--dark);color:var(--text);font-family:var(--fb);min-hei
 .log-text.qtr{color:var(--purple);font-weight:600;}
 .sub-panel{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
 .sub-header{padding:10px 14px;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);background:rgba(255,255,255,0.015);}
-.sub-slot{display:flex;align-items:center;justify-content:space-between;padding:8px 14px;border-bottom:1px solid var(--border);font-size:12px;}
+.sub-slot{display:flex;align-items:center;justify-content:space-between;padding:5px 10px;border-bottom:1px solid var(--border);font-size:11px;}
 .sub-slot:last-child{border-bottom:none;}
 .sub-slot.selected{background:rgba(245,166,35,0.06);}
 .sub-btn{padding:4px 10px;border-radius:4px;font-size:11px;font-weight:600;cursor:pointer;border:1px solid var(--border2);background:transparent;color:var(--muted);font-family:var(--fb);transition:all 0.12s;}
@@ -180,15 +180,15 @@ html,body{background:var(--dark);color:var(--text);font-family:var(--fb);min-hei
 .form-dot.L{background:var(--red);}
 
 /* BUTTONS */
-.btn{padding:9px 18px;border-radius:7px;font-family:var(--fb);font-size:13px;font-weight:500;cursor:pointer;border:1px solid var(--border2);background:transparent;color:var(--text);transition:all 0.12s;}
+.btn{padding:6px 14px;border-radius:7px;font-family:var(--fb);font-size:13px;font-weight:500;cursor:pointer;border:1px solid var(--border2);background:transparent;color:var(--text);transition:all 0.12s;}
 .btn:hover{background:rgba(255,255,255,0.05);}
 .btn:disabled{opacity:0.4;cursor:not-allowed;}
 .btn-ac{background:var(--accent);color:#0a0c10;border-color:var(--accent);font-weight:700;}
 .btn-ac:hover{background:var(--accent2);border-color:var(--accent2);}
 .btn-green{background:rgba(34,197,94,0.15);color:var(--green);border-color:var(--green);}
 .btn-red{background:rgba(239,68,68,0.1);color:var(--red);border-color:var(--red);}
-.btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:1.25rem;}
-.panel-grid{display:grid;grid-template-columns:1fr 280px;gap:1.25rem;}
+.btn-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:0.75rem;}
+.panel-grid{display:grid;grid-template-columns:1fr 220px;gap:0.75rem;}
 
 /* TOAST */
 .toast{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--surface2);border:1px solid var(--border2);border-radius:8px;padding:10px 16px;font-size:13px;color:var(--text);z-index:999;opacity:0;transform:translateY(8px);transition:all 0.2s;max-width:300px;}
@@ -202,17 +202,50 @@ html,body{background:var(--dark);color:var(--text);font-family:var(--fb);min-hei
 /* HALFTIME MODAL */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:500;display:flex;align-items:center;justify-content:center;display:none;}
 .modal-overlay.show{display:flex;}
-.modal{background:var(--surface2);border:1px solid var(--border2);border-radius:12px;padding:2rem;max-width:480px;width:90%;text-align:center;}
-.modal-title{font-family:var(--fd);font-size:28px;font-weight:800;letter-spacing:1px;margin-bottom:0.5rem;}
-.modal-sub{font-size:13px;color:var(--muted);margin-bottom:1.5rem;}
+.modal{background:var(--surface2);border:1px solid var(--border2);border-radius:10px;padding:1.25rem;max-width:420px;width:90%;text-align:center;}
+.modal-title{font-family:var(--fd);font-size:22px;font-weight:800;letter-spacing:1px;margin-bottom:0.35rem;}
+.modal-sub{font-size:13px;color:var(--muted);margin-bottom:0.75rem;}
 
-.conf-tabs{display:flex;gap:4px;margin-bottom:1.5rem;}
+.conf-tabs{display:flex;gap:4px;margin-bottom:0.75rem;}
 .conf-tab{padding:7px 16px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:13px;font-family:var(--fb);cursor:pointer;transition:all 0.12s;}
 .conf-tab.active{border-color:var(--accent);color:var(--accent);background:var(--accentd);}
 
 .trend{display:inline-block;font-size:10px;padding:1px 5px;border-radius:3px;margin-left:4px;vertical-align:middle;}
 .trend.up{background:rgba(34,197,94,0.15);color:var(--green);}
 .trend.dn{background:rgba(239,68,68,0.1);color:var(--red);}
+
+/* PLAYER PHOTOS */
+.player-avatar{width:42px;height:42px;border-radius:50%;overflow:hidden;background:var(--surface2);border:2px solid var(--border2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:13px;font-weight:800;color:var(--muted2);}
+.player-avatar img{width:100%;height:100%;object-fit:cover;object-position:top center;}
+.player-avatar-lg{width:60px;height:60px;border-radius:50%;overflow:hidden;background:var(--surface2);border:2px solid var(--border2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:17px;font-weight:800;color:var(--muted2);}
+.player-avatar-lg img{width:100%;height:100%;object-fit:cover;object-position:top center;}
+.lp-avatar{width:52px;height:44px;border-radius:50%;overflow:hidden;margin:0 auto 5px;background:rgba(255,255,255,0.88);border:3px solid rgba(255,255,255,0.5);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:11px;font-weight:800;color:#1a3a1a;transition:transform 0.15s;}
+.lp-avatar img{width:100%;height:100%;object-fit:cover;object-position:top center;}
+.lp-avatar:hover{transform:scale(1.07);}
+.bs-mini-av{width:26px;height:26px;border-radius:50%;overflow:hidden;background:var(--surface3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:800;color:var(--muted);font-family:var(--fd);}
+.bs-mini-av img{width:100%;height:100%;object-fit:cover;object-position:top center;}
+.sub-mini-av{width:28px;height:28px;border-radius:50%;overflow:hidden;background:var(--surface3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:800;color:var(--muted);font-family:var(--fd);}
+.sub-mini-av img{width:100%;height:100%;object-fit:cover;object-position:top center;}
+.starter-card{display:flex;flex-direction:column;align-items:center;text-align:center;flex:1;min-width:90px;padding:0.75rem 0.5rem;background:var(--surface2);border:1px solid var(--border);border-radius:8px;transition:all 0.14s;}
+.starter-card:hover{border-color:var(--border2);background:var(--surface3);}
+@keyframes scoreFlash{0%{color:var(--text);}30%{color:var(--accent);text-shadow:0 0 24px rgba(245,166,35,0.7);}100%{color:var(--text);}}
+.sb-score.flash{animation:scoreFlash 0.55s ease;}
+@keyframes logSlide{from{opacity:0;transform:translateY(-8px);}to{opacity:1;transform:translateY(0);}}
+.log-entry{animation:logSlide 0.28s ease;}
+.momentum-wrap{margin-top:0.75rem;display:flex;align-items:center;gap:8px;font-size:11px;}
+.momentum-bar{flex:1;height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden;position:relative;}
+.momentum-fill{height:100%;border-radius:3px;transition:width 0.6s ease;position:absolute;top:0;}
+.momentum-my{left:0;background:var(--green);}
+.momentum-opp{right:0;background:var(--red);}
+.q-score-chip{background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:3px 8px;font-size:11px;font-family:var(--fd);font-weight:700;}
+.log-text.pts3{color:var(--accent);}
+.log-text.timeout{color:#06b6d4;}
+.log-text.reb{color:var(--muted2);}
+@keyframes popIn{from{opacity:0;transform:scale(0.9);}to{opacity:1;transform:scale(1);}}
+.bs-row.on-court{background:rgba(245,166,35,0.04);}
+.bs-row.benched{opacity:0.45;}
+.bs-player-cell{display:flex;align-items:center;gap:7px;}
+.bs-name{font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 </style>
 </head>
 <body>
@@ -243,6 +276,7 @@ html,body{background:var(--dark);color:var(--text);font-family:var(--fb);min-hei
   <div class="nav-section">Stats</div>
   <div class="nav-item" onclick="nav('stats')"><span class="ni">📈</span>Team Stats</div>
   <div style="flex:1;"></div>
+  <div class="nav-item" onclick="nav('trade')"><span class="ni">🤝</span>Trade Center</div>
   <div class="nav-item" onclick="nav('pick')" style="color:var(--red);margin-bottom:0.5rem;"><span class="ni">🔄</span>Change Team</div>
 </div>
 
@@ -271,7 +305,7 @@ html,body{background:var(--dark);color:var(--text);font-family:var(--fb);min-hei
     <div class="stat-box"><div class="stat-label">Conf Rank</div><div class="stat-val ac" id="d-rank">—</div></div>
     <div class="stat-box"><div class="stat-label">Win %</div><div class="stat-val" id="d-pct">.000</div></div>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem;margin-bottom:1.5rem;">
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem;margin-bottom:0.75rem;">
     <div>
       <div class="sec-title">Form (Last 10)</div>
       <div class="card-sm">
@@ -306,7 +340,7 @@ html,body{background:var(--dark);color:var(--text);font-family:var(--fb);min-hei
 <div id="screen-roster" class="screen">
   <div class="page-title">ROSTER</div>
   <div class="page-sub" id="ros-sub"></div>
-  <div style="display:grid;grid-template-columns:1fr 200px;gap:1rem;margin-bottom:1rem;">
+  <div style="display:grid;grid-template-columns:1fr 200px;gap:1rem;margin-bottom:0.5rem;">
     <div></div>
     <div style="display:flex;align-items:center;gap:8px;">
       <span style="font-size:12px;color:var(--muted);">Sort by:</span>
@@ -321,7 +355,7 @@ html,body{background:var(--dark);color:var(--text);font-family:var(--fb);min-hei
   </div>
   <div class="card" style="padding:0;overflow:hidden;">
     <table class="roster-table" id="ros-table">
-      <thead><tr><th>#</th><th>Player</th><th>Pos</th><th>OVR</th><th>PPG</th><th>RPG</th><th>APG</th><th>Stamina</th><th>Status</th></tr></thead>
+      <thead><tr><th>#</th><th></th><th>Player</th><th>Pos</th><th>OVR</th><th>PPG</th><th>RPG</th><th>APG</th><th>Stamina</th><th>Status</th></tr></thead>
       <tbody id="ros-body"></tbody>
     </table>
   </div>
@@ -409,30 +443,39 @@ html,body{background:var(--dark);color:var(--text);font-family:var(--fb);min-hei
             <div class="sb-city" id="live-away-city"></div>
           </div>
         </div>
+        
+        <div class="momentum-wrap">
+          <span id="mom-my-lbl" style="min-width:32px;text-align:right;font-family:var(--fd);font-weight:700;color:var(--green);"></span>
+          <div class="momentum-bar">
+            <div class="momentum-fill momentum-my" id="mom-my" style="width:50%;"></div>
+            <div class="momentum-fill momentum-opp" id="mom-opp" style="width:50%;"></div>
+          </div>
+          <span id="mom-opp-lbl" style="min-width:32px;font-family:var(--fd);font-weight:700;color:var(--red);"></span>
+        </div>
         <div style="display:flex;gap:0.5rem;justify-content:center;">
           <div id="q-scores" style="font-size:12px;color:var(--muted);display:flex;gap:1rem;"></div>
         </div>
       </div>
       <!-- Box score -->
-      <div class="sec-title">Box Score</div>
-      <div class="card" style="padding:0;overflow:hidden;margin-bottom:1rem;">
+      <div class="sec-title" style="margin-top:0.4rem;">Box Score</div>
+      <div class="card" style="padding:0;overflow:hidden;margin-bottom:0.5rem;">
         <div class="bs-header"><div>Player</div><div>PTS</div><div>REB</div><div>AST</div><div>MIN</div><div>+/-</div></div>
         <div id="bs-home"></div>
       </div>
       <!-- Play log -->
-      <div class="sec-title">Play-by-Play</div>
+      <div class="sec-title" style="margin-top:0.4rem;">Play-by-Play</div>
       <div class="card" style="padding:0;overflow:hidden;">
         <div class="live-log" id="play-log"></div>
       </div>
     </div>
     <!-- RIGHT PANEL: SUBS -->
     <div>
-      <div class="card-sm" style="margin-bottom:1rem;">
+      <div class="card-sm" style="margin-bottom:0.5rem;">
         <div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Timeouts Remaining</div>
         <div id="timeout-dots" style="display:flex;gap:6px;"></div>
         <button class="btn" style="margin-top:10px;width:100%;" id="timeout-btn" onclick="callTimeout()">Call Timeout</button>
       </div>
-      <div class="card-sm" style="margin-bottom:1rem;">
+      <div class="card-sm" style="margin-bottom:0.5rem;">
         <div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Adjust Scheme</div>
         <div class="opt-grid" id="live-off-opts">
           <button class="opt-btn" onclick="adjustLive('off','motion',this)">Motion</button>
@@ -488,14 +531,54 @@ html,body{background:var(--dark);color:var(--text);font-family:var(--fb);min-hei
 <div id="screen-stats" class="screen">
   <div class="page-title">TEAM STATS</div>
   <div class="page-sub" id="stats-sub"></div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1.5rem;" id="stats-grid"></div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:0.75rem;" id="stats-grid"></div>
   <div class="sec-title">Player Stats</div>
   <div class="card" style="padding:0;overflow:hidden;">
     <table class="roster-table">
-      <thead><tr><th>Player</th><th>POS</th><th>GP</th><th>PPG</th><th>RPG</th><th>APG</th><th>SPG</th><th>BPG</th><th>FG%</th><th>3P%</th></tr></thead>
+      <thead><tr><th colspan="2">Player</th><th>POS</th><th>GP</th><th>PPG</th><th>RPG</th><th>APG</th><th>SPG</th><th>BPG</th><th>FG%</th><th>3P%</th></tr></thead>
       <tbody id="player-stats-body"></tbody>
     </table>
   </div>
+</div>
+
+
+<!-- ========== TRADE CENTER ========== -->
+<div id="screen-trade" class="screen">
+  <div class="page-title">TRADE CENTER</div>
+  <div class="page-sub">Propose player-for-player trades with any NBA team. No picks.</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+    <div>
+      <div class="sec-title">Your Team — Select to Offer</div>
+      <div class="card" style="padding:0;overflow:hidden;max-height:calc(100vh - 220px);overflow-y:auto;">
+        <div id="trade-my-roster"></div>
+      </div>
+    </div>
+    <div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:0.4rem;">
+        <div class="sec-title" style="margin-bottom:0;">Select Team:</div>
+        <select id="trade-team-select" onchange="renderTradeOppRoster()" style="background:var(--surface);border:1px solid var(--border);color:var(--text);font-family:var(--fb);font-size:11px;padding:4px 6px;border-radius:4px;flex:1;cursor:pointer;"></select>
+      </div>
+      <div class="card" style="padding:0;overflow:hidden;max-height:calc(100vh - 260px);overflow-y:auto;">
+        <div id="trade-opp-roster"></div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:0.6rem;padding:0.6rem;background:var(--surface2);border:1px solid var(--border);border-radius:6px;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+    <div style="flex:1;">
+      <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;">Your Offer</div>
+      <div id="trade-my-offer" style="font-size:12px;color:var(--accent);font-weight:600;">None selected</div>
+    </div>
+    <div style="font-size:18px;color:var(--muted);">⇄</div>
+    <div style="flex:1;">
+      <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;">You Receive</div>
+      <div id="trade-opp-offer" style="font-size:12px;color:var(--green);font-weight:600;">None selected</div>
+    </div>
+    <div style="display:flex;gap:6px;">
+      <button class="btn" onclick="clearTrade()">Clear</button>
+      <button class="btn btn-ac" onclick="proposeTrade()" id="trade-btn">Propose Trade</button>
+    </div>
+  </div>
+  <div id="trade-result" style="margin-top:0.5rem;font-size:12px;text-align:center;"></div>
 </div>
 
 </div><!-- content -->
@@ -507,14 +590,87 @@ html,body{background:var(--dark);color:var(--text);font-family:var(--fb);min-hei
   <div class="modal">
     <div class="modal-title">HALFTIME</div>
     <div class="modal-sub" id="ht-sub"></div>
-    <div id="ht-adjustments" style="margin-bottom:1.5rem;text-align:left;"></div>
+    <div id="ht-top-scorers" style="margin-bottom:0.6rem;display:flex;gap:14px;justify-content:center;"></div>
+    <div id="ht-adjustments" style="margin-bottom:0.75rem;text-align:left;"></div>
     <button class="btn btn-ac" style="width:100%;" onclick="closeHalftime()">▶ Start 2nd Half</button>
+  </div>
+</div>
+
+
+<!-- GAME OVER MODAL -->
+<div class="modal-overlay" id="gameover-modal">
+  <div class="modal" style="animation:popIn 0.25s ease;">
+    <div class="modal-title" id="go-title" style="font-size:30px;">FINAL</div>
+    <div style="font-family:var(--fd);font-size:56px;font-weight:900;margin:0.5rem 0;letter-spacing:2px;" id="go-score"></div>
+    <div class="modal-sub" id="go-sub"></div>
+    <div id="go-stats" style="margin-bottom:0.75rem;"></div>
+    <div style="display:flex;gap:10px;">
+      <button class="btn" style="flex:1;" onclick="closeGameOver();nav('dashboard')">🏠 Dashboard</button>
+      <button class="btn btn-ac" style="flex:1;" id="go-next-btn">▶ Next Game</button>
+    </div>
   </div>
 </div>
 
 <div class="toast" id="toast"></div>
 
 <script>
+
+// ===================== PLAYER PHOTO SYSTEM =====================
+const photoCache = {};
+const photoQueue = [];
+let photoFetching = false;
+
+function getPlayerPhoto(playerName, imgEl) {
+  if (photoCache[playerName] !== undefined) {
+    if (photoCache[playerName] && imgEl.isConnected) imgEl.src = photoCache[playerName];
+    return;
+  }
+  photoQueue.push({ playerName, imgEl });
+  if (!photoFetching) drainPhotoQueue();
+}
+
+function drainPhotoQueue() {
+  if (!photoQueue.length) { photoFetching = false; return; }
+  photoFetching = true;
+  const { playerName, imgEl } = photoQueue.shift();
+  if (photoCache[playerName] !== undefined) {
+    if (photoCache[playerName] && imgEl && imgEl.isConnected) imgEl.src = photoCache[playerName];
+    setTimeout(drainPhotoQueue, 60);
+    return;
+  }
+  const url = 'https://en.wikipedia.org/w/api.php?action=query&titles=' + encodeURIComponent(playerName.replace(/ /g,'_')) + '&prop=pageimages&format=json&pithumbsize=200&origin=*';
+  fetch(url)
+    .then(r => r.json())
+    .then(data => {
+      const pages = data && data.query && data.query.pages;
+      if (!pages) { photoCache[playerName] = null; return; }
+      const page = Object.values(pages)[0];
+      const src = page && page.thumbnail && page.thumbnail.source;
+      photoCache[playerName] = src || null;
+      if (src && imgEl && imgEl.isConnected) imgEl.src = src;
+    })
+    .catch(() => { photoCache[playerName] = null; })
+    .finally(() => setTimeout(drainPhotoQueue, 90));
+}
+
+function makeAvatar(playerName, size) {
+  const clsMap = { sm:'player-avatar', lg:'player-avatar-lg', lineup:'lp-avatar', mini:'bs-mini-av', sub:'sub-mini-av' };
+  const cls = clsMap[size] || 'player-avatar';
+  const initials = playerName.split(' ').map(w=>w[0]||'').join('').slice(0,2).toUpperCase();
+  const uid = 'av' + Math.random().toString(36).slice(2,8);
+  setTimeout(() => {
+    const el = document.getElementById(uid);
+    if (!el) return;
+    const img = new Image();
+    img.alt = playerName;
+    img.style.cssText = 'width:100%;height:100%;object-fit:cover;object-position:top center;';
+    img.onerror = () => img.remove();
+    img.onload = () => { el.textContent = ''; el.appendChild(img); };
+    getPlayerPhoto(playerName, img);
+  }, 80);
+  return '<div class="' + cls + '" id="' + uid + '">' + initials + '</div>';
+}
+
 // ===================== DATA =====================
 const CONFERENCES = {
   East: {
@@ -964,10 +1120,11 @@ function renderDashboard(){
 
   const startersEl = document.getElementById('d-starters');
   startersEl.innerHTML = S.starters.slice(0,5).map(p=>`
-    <div style="text-align:center;flex:1;min-width:80px;">
-      <div style="font-size:11px;padding:2px 6px;border-radius:3px;display:inline-block;margin-bottom:4px;" class="pos-badge pos-${p.pos}">${p.pos}</div>
-      <div style="font-size:12px;font-weight:600;">${p.name.split(' ').pop()}</div>
-      <div style="font-family:var(--fd);font-size:20px;font-weight:700;color:var(--accent);">${p.ovr}</div>
+    <div class="starter-card">
+      ${makeAvatar(p.name,'lg')}
+      <div class="pos-badge pos-${p.pos}" style="margin-top:6px;font-size:10px;">${p.pos}</div>
+      <div style="font-size:12px;font-weight:600;margin-top:4px;">${p.name.split(' ').pop()}</div>
+      <div style="font-family:var(--fd);font-size:22px;font-weight:800;color:var(--accent);">${p.ovr}</div>
       <div style="font-size:11px;color:var(--muted);">${p.ppg} PPG</div>
     </div>
   `).join('');
@@ -991,6 +1148,7 @@ function renderRoster(){
     const starterTag = p.starter ? '<span style="font-size:10px;color:var(--accent);margin-left:4px;">★ STARTER</span>' : '';
     return `<tr class="${p.starter?'starter-row':''}">
       <td style="color:var(--muted);font-size:11px;">${i+1}</td>
+      <td style="width:44px;padding-right:4px;">${makeAvatar(p.name,'sm')}</td>
       <td><span style="font-weight:600;">${p.name}</span>${starterTag}</td>
       <td><span class="pos-badge pos-${p.pos}">${p.pos}</span></td>
       <td><span class="ovr-badge ${ovrCls}">${p.ovr}</span></td>
@@ -1014,19 +1172,17 @@ function renderLineup(){
   document.getElementById('court-lineup').innerHTML = rows.map(row=>`
     <div class="lineup-row">${row.map(p=>p?`
       <div class="lineup-slot">
-        <div class="lp-dot">
-          <span style="font-size:8px;opacity:0.6;">${p.pos}</span>
-          <span style="font-size:10px;">${p.name.split(' ').pop().slice(0,8)}</span>
-        </div>
+        ${makeAvatar(p.name,'lineup')}
         <div class="lp-name">${p.name.split(' ').pop()}</div>
-        <div class="lp-pos">${p.ovr} OVR</div>
+        <div class="lp-pos">${p.pos} · ${p.ovr} OVR</div>
       </div>` : '').join('')}</div>
   `).join('');
 
   const bench = S.roster.filter(p=>!p.starter);
   document.getElementById('bench-list').innerHTML = bench.map(p=>`
-    <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 12px;border-bottom:1px solid var(--border);font-size:12px;">
-      <span class="pos-badge pos-${p.pos}" style="margin-right:6px;">${p.pos}</span>
+    <div style="display:flex;align-items:center;gap:7px;padding:7px 12px;border-bottom:1px solid var(--border);font-size:12px;">
+      ${makeAvatar(p.name,'mini')}
+      <span class="pos-badge pos-${p.pos}">${p.pos}</span>
       <span style="flex:1;font-weight:500;">${p.name}</span>
       <span style="color:var(--muted);margin-right:8px;">${p.ovr}</span>
       <button class="sub-btn" onclick="makeStarterToggle('${p.name}')">Start</button>
@@ -1138,6 +1294,7 @@ function renderStats(){
     const fgpct = ps.fga>0?((ps.fgm/ps.fga)*100).toFixed(1):'—';
     const p3pct = ps.p3a>0?((ps.p3m/ps.p3a)*100).toFixed(1):'—';
     return `<tr>
+      <td style="width:36px;padding-right:4px;">${makeAvatar(p.name,'mini')}</td>
       <td style="font-weight:500;">${p.name}${p.starter?'<span class="star">★</span>':''}</td>
       <td><span class="pos-badge pos-${p.pos}">${p.pos}</span></td>
       <td style="color:var(--muted);">${ps.gp}</td>
@@ -1180,7 +1337,7 @@ function goLive(){
     timeouts: 7, oppTimeouts: 7,
     halftimeDone: false,
     paused: false,
-    myScore: 0, oppScore: 0,
+    myScore: 0, oppScore: 0, momentum: 50,
     offAdj: S.offScheme, defAdj: S.defScheme
   };
 
@@ -1199,20 +1356,15 @@ function renderLiveUI(){
   document.getElementById('live-away-abbr').textContent = isHome ? ROSTERS[opp].abbr : ROSTERS[S.team].abbr;
   document.getElementById('live-away-city').textContent = isHome ? opp : S.team;
   document.getElementById('live-sub').textContent = `${isHome?'Home':'Away'} vs ${opp} · Game ${S.gamesPlayed+1} of 82`;
+  document.getElementById('play-log').innerHTML = '';
 
-  // Reset all game buttons to their default state for every new game
+  // Reset all buttons for every new game
   const advBtn = document.getElementById('advance-btn');
   const simHalfBtn = document.getElementById('sim-half-btn');
   const simFullBtn = document.getElementById('sim-full-btn');
-  advBtn.textContent = '▶ Advance';
-  advBtn.disabled = false;
-  advBtn.onclick = ()=>advanceGame();
-  simHalfBtn.textContent = '⏩ Sim Half';
-  simHalfBtn.disabled = false;
-  simHalfBtn.onclick = ()=>simToHalf();
-  simFullBtn.textContent = '⏭ Sim to End';
-  simFullBtn.disabled = false;
-  simFullBtn.onclick = ()=>simToEnd();
+  advBtn.textContent = '▶ Advance'; advBtn.disabled = false; advBtn.onclick = ()=>advanceGame();
+  simHalfBtn.textContent = '⏩ Sim Half'; simHalfBtn.disabled = false; simHalfBtn.onclick = ()=>simToHalf();
+  simFullBtn.textContent = '⏭ Sim to End'; simFullBtn.disabled = false; simFullBtn.onclick = ()=>simToEnd();
   document.getElementById('live-indicator').style.display = '';
 
   updateScoreboard();
@@ -1233,7 +1385,22 @@ function updateScoreboard(){
   const prog = (lg.totalSecs/lg.gameSecs)*100;
   document.getElementById('live-prog').style.width = prog+'%';
   const qEl = document.getElementById('q-scores');
-  qEl.innerHTML = lg.qScores.map((q,i)=>`<span>Q${i+1}: ${lg.isHome?q.h:q.a} - ${lg.isHome?q.a:q.h}</span>`).join(' · ');
+  qEl.innerHTML = lg.qScores.filter(q=>q.h>0||q.a>0).map((q,i)=>`<span class="q-score-chip">Q${i+1}: ${lg.isHome?q.h:q.a}-${lg.isHome?q.a:q.h}</span>`).join('');
+  // Momentum
+  const myM = Math.round(lg.momentum||50);
+  const myEl = document.getElementById('mom-my');
+  const oppEl = document.getElementById('mom-opp');
+  const myLbl = document.getElementById('mom-my-lbl');
+  const oppLbl = document.getElementById('mom-opp-lbl');
+  if(myEl){ myEl.style.width = myM+'%'; oppEl.style.width = (100-myM)+'%'; }
+  if(myLbl){ myLbl.textContent = ROSTERS[S.team].abbr; oppLbl.textContent = ROSTERS[lg.opp].abbr; }
+}
+
+function flashScore(){
+  const el = document.getElementById('live-score');
+  el.classList.remove('flash');
+  void el.offsetWidth;
+  el.classList.add('flash');
 }
 
 function updateBoxScore(){
@@ -1243,8 +1410,11 @@ function updateBoxScore(){
   const all = [...oncourt,...bench];
   document.getElementById('bs-home').innerHTML = all.map(p=>`
     <div class="bs-row ${p.onCourt?'on-court':'benched'}">
-      <div class="bs-name">${p.name.split(' ').pop()}${p.onCourt?' <span style="color:var(--green);font-size:9px;">●</span>':''}</div>
-      <div style="font-weight:${p.stats.pts>=10?600:400};color:${p.stats.pts>=20?'var(--accent)':''}">${p.stats.pts}</div>
+      <div class="bs-player-cell">
+        ${makeAvatar(p.name,'mini')}
+        <span class="bs-name">${p.name.split(' ').pop()}${p.onCourt?' <span style="color:var(--green);font-size:8px;margin-left:2px;">●</span>':''}</span>
+      </div>
+      <div style="font-weight:${p.stats.pts>=10?700:400};color:${p.stats.pts>=20?'var(--accent)':''}">${p.stats.pts}</div>
       <div style="color:var(--muted2)">${p.stats.reb}</div>
       <div style="color:var(--muted2)">${p.stats.ast}</div>
       <div style="color:var(--muted)">${p.stats.mins}'</div>
@@ -1260,21 +1430,23 @@ function renderSubPanel(){
   document.getElementById('sub-oncourt').innerHTML = oncourt.map(p=>{
     const staminaColor = p.stamina>60?'var(--green)':p.stamina>30?'var(--accent)':'var(--red)';
     return `<div class="sub-slot">
-      <span class="pos-badge pos-${p.pos}" style="margin-right:6px;">${p.pos}</span>
+      ${makeAvatar(p.name,'sub')}
+      <span class="pos-badge pos-${p.pos}" style="margin:0 4px;">${p.pos}</span>
       <span style="flex:1;font-weight:500;font-size:12px;">${p.name.split(' ').pop()}</span>
       <div class="energy-bar"><div class="energy-fill" style="width:${p.stamina}%;background:${staminaColor};"></div></div>
       ${p.fouls>=5?'<span style="color:var(--red);font-size:10px;margin-left:4px;">OUT</span>':''}
-      <button class="sub-btn" style="margin-left:6px;" onclick="selectForSub('${p.name}','out')">Sub Out</button>
+      <button class="sub-btn" style="margin-left:6px;" onclick="selectForSub('${p.name}','out')">Out</button>
     </div>`;
   }).join('');
 
   document.getElementById('sub-bench').innerHTML = bench.map(p=>{
     const staminaColor = p.stamina>60?'var(--green)':p.stamina>30?'var(--accent)':'var(--red)';
     return `<div class="sub-slot">
-      <span class="pos-badge pos-${p.pos}" style="margin-right:6px;">${p.pos}</span>
+      ${makeAvatar(p.name,'sub')}
+      <span class="pos-badge pos-${p.pos}" style="margin:0 4px;">${p.pos}</span>
       <span style="flex:1;font-weight:500;font-size:12px;">${p.name.split(' ').pop()}</span>
       <div class="energy-bar"><div class="energy-fill" style="width:${p.stamina}%;background:${staminaColor};"></div></div>
-      <button class="sub-btn in" style="margin-left:6px;" onclick="selectForSub('${p.name}','in')">Sub In</button>
+      <button class="sub-btn in" style="margin-left:6px;" onclick="selectForSub('${p.name}','in')">In</button>
     </div>`;
   }).join('') || '<div style="padding:10px 14px;font-size:12px;color:var(--muted);">All players on court</div>';
 }
@@ -1345,7 +1517,7 @@ function addLog(text, type='', minStr=''){
   const clock = minStr || `Q${lg.quarter} ${Math.floor(lg.clockSecs/60)}:${String(lg.clockSecs%60).padStart(2,'0')}`;
   const div = document.createElement('div');
   div.className = 'log-entry';
-  const icon = type==='pts'?'🏀':type==='opp'?'🔴':type==='foul'?'🟡':type==='sub'?'🔄':type==='qtr'?'🏆':type==='timeout'?'⏱':'📋';
+  const icon = type==='pts'?'🏀':type==='pts3'?'💦':type==='opp'?'🔴':type==='foul'?'🟡':type==='sub'?'🔄':type==='qtr'?'🏆':type==='timeout'?'⏱':type==='reb'?'💪':'📋';
   div.innerHTML = `<span class="log-time">${clock}</span><span class="log-icon">${icon}</span><span class="log-text ${type}">${text}</span>`;
   logEl.insertBefore(div, logEl.firstChild);
   lg.logs.push({clock,text,type});
@@ -1416,108 +1588,165 @@ function simulatePossessions(secs){
 
 function getMyOffRating(){
   const oncourt = S.roster.filter(p=>p.onCourt);
+  if(!oncourt.length) return 75;
   const avgOvr = oncourt.reduce((s,p)=>s+p.ovr,0)/oncourt.length;
-  const staminaPen = oncourt.reduce((s,p)=>s+(100-p.stamina),0)/oncourt.length * 0.1;
+  const staminaPen = oncourt.reduce((s,p)=>s+(100-p.stamina),0)/oncourt.length * 0.08;
   let bonus = 0;
-  if(S.liveGame.offAdj==='iso') bonus=2;
-  if(S.liveGame.offAdj==='pick') bonus=3;
-  if(S.pace==='fast') bonus+=2;
-  return avgOvr - staminaPen + bonus;
+  if(S.liveGame.offAdj==='iso') bonus=1;
+  if(S.liveGame.offAdj==='pick') bonus=1.5;
+  if(S.pace==='fast') bonus+=1;
+  // Cap at realistic range — teams score ~100-115 ppg
+  return Math.min(88, Math.max(68, avgOvr - staminaPen + bonus));
 }
 
-function getMyDefRating(){
+function getOppOffRating(){
+  const lg = S.liveGame;
+  const oppOvr = ROSTERS[lg.opp].ovr;
   const oncourt = S.roster.filter(p=>p.onCourt);
-  const avgOvr = oncourt.reduce((s,p)=>s+p.ovr,0)/oncourt.length;
-  const oppOvr = ROSTERS[S.liveGame.opp].ovr;
-  let bonus = 0;
-  if(S.liveGame.defAdj==='press') bonus=3;
-  if(S.liveGame.defAdj==='zone') bonus=1;
-  return avgOvr - oppOvr;
+  if(!oncourt.length) return oppOvr;
+  const avgDef = oncourt.reduce((s,p)=>s+p.ovr,0)/oncourt.length;
+  let defBonus = 0;
+  if(lg.defAdj==='press') defBonus=2;
+  if(lg.defAdj==='zone') defBonus=1;
+  if(lg.defAdj==='switch') defBonus=1.5;
+  // Opponent is always a real threat — never too easy
+  return Math.min(88, Math.max(68, oppOvr - (avgDef-oppOvr)*0.3 - defBonus));
 }
+
+// Per-possession scoring probability calibrated to ~105 pts per 100 possessions
+// A game has ~200 total possessions (100 each side), so ~105 pts each side
+// That means each possession scores ~1.05 pts on average
+// We use 2pt/3pt splits: ~60% 2pt (=1.2 pts), ~25% 3pt (=0.75), ~15% miss
+// Overall: score on ~47% of possessions
 
 function simulateMyPossession(){
   const lg = S.liveGame;
   const oncourt = S.roster.filter(p=>p.onCourt);
   if(!oncourt.length) return;
-  
-  const offRating = getMyOffRating();
-  const baseScore = 52 + offRating/2;
-  const roll = Math.random()*100;
-  
-  if(roll > 100-baseScore*0.15){
-    // Score! Weighted by scorer rating
+
+  const offRtg = getMyOffRating();
+  // offRtg 68–88 maps to scoring probability 0.42–0.52
+  const scoreProb = 0.38 + (offRtg - 68) * (0.14/20);
+  const roll = Math.random();
+
+  if(roll < scoreProb){
     const scorer = pickWeighted(oncourt, p=>p.ovr);
-    const pts = roll>95?3:roll>70?2:2;
-    const assist = oncourt.find(p=>p!==scorer && Math.random()>0.6);
-    
+    // 3pt rate ~30%, 2pt otherwise
+    const is3 = Math.random() < 0.30;
+    const pts = is3 ? 3 : 2;
+    const assist = oncourt.find(p=>p!==scorer && Math.random()>0.58);
+
     scorer.stats.pts += pts;
     scorer.stats.fga++;
     scorer.stats.fgm++;
-    if(pts===3){scorer.stats.p3a++;scorer.stats.p3m++;}
+    if(is3){scorer.stats.p3a++;scorer.stats.p3m++;}
     if(assist) assist.stats.ast++;
-    
     oncourt.forEach(p=>p.stats.plusminus+=pts);
     lg.myScore += pts;
-    
-    if(Math.random()<0.15 || scorer.stats.pts%10===0){
-      addLog(`${scorer.name.split(' ').pop()} ${pts===3?'three-pointer':'scores'} for ${pts}pts (${scorer.stats.pts} total)`, 'pts');
+    lg.momentum = Math.min(100,(lg.momentum||50)+(is3?6:3));
+    flashScore();
+
+    // Check triple double
+    if(assist){
+      const td = checkTripleDouble(assist);
+      if(td) addLog(`🔥 ${assist.name.split(' ').pop()} has a TRIPLE DOUBLE! (${scorer.stats.pts}p ${assist.stats.reb}r ${assist.stats.ast}a)`, 'qtr');
     }
-    
-    updatePlayerStats(scorer, {pts,fgm:1,fga:1});
+    const tdScorer = checkTripleDouble(scorer);
+    if(tdScorer) addLog(`🔥 ${scorer.name.split(' ').pop()} has a TRIPLE DOUBLE!`, 'qtr');
+
+    if(Math.random()<0.22){
+      addLog(`${scorer.name.split(' ').pop()} ${is3?'THREE! 💦':'scores'} ${pts}pts (${scorer.stats.pts} total)${assist?' · ast '+assist.name.split(' ').pop():''}`, is3?'pts3':'pts');
+    }
+    updatePlayerStats(scorer,{pts,fgm:1,fga:1});
     if(assist) updatePlayerStats(assist,{ast:1});
-    
-  } else if(roll < 12){
+
+  } else if(roll < scoreProb + 0.14){
     // Turnover
-    const to = pickWeighted(oncourt, p=>100-p.ovr);
+    const to = pickWeighted(oncourt, p=>Math.max(1,100-p.ovr));
     to.stats.to++;
-    if(Math.random()<0.3) addLog(`${to.name.split(' ').pop()} turnover`, 'foul');
+    lg.momentum = Math.max(0,(lg.momentum||50)-4);
+    if(Math.random()<0.35) addLog(`${to.name.split(' ').pop()} turnover`,'foul');
   } else {
-    // Miss
+    // Missed shot — rebound
     const shooter = pickWeighted(oncourt, p=>p.ovr);
     shooter.stats.fga++;
     updatePlayerStats(shooter,{fga:1});
-    // Rebound
-    const rebounder = pickWeighted(oncourt, p=>['PF','C'].includes(p.pos)?p.ovr*1.5:p.ovr*0.7);
-    if(rebounder) rebounder.stats.reb++;
+    // Offensive rebound ~27% of misses
+    if(Math.random()<0.27){
+      const bigOff = oncourt.filter(p=>['PF','C'].includes(p.pos));
+      const reb = bigOff.length ? pickWeighted(bigOff,p=>p.ovr) : pickWeighted(oncourt,p=>p.ovr);
+      if(reb){
+        reb.stats.reb++;
+        // Second chance — sim another quick possession (reduced prob)
+        if(Math.random()<0.45){
+          const sc2 = pickWeighted(oncourt,p=>p.ovr);
+          sc2.stats.pts+=2; sc2.stats.fga++; sc2.stats.fgm++;
+          oncourt.forEach(p=>p.stats.plusminus+=2);
+          lg.myScore+=2; flashScore();
+          updatePlayerStats(sc2,{pts:2,fgm:1,fga:1});
+        }
+      }
+    } else {
+      // Defensive rebound for opponent — nothing for us
+    }
   }
 }
 
 function simulateOppPossession(){
   const lg = S.liveGame;
-  const oppOvr = ROSTERS[lg.opp].ovr;
-  const defRating = getMyDefRating();
-  const baseOppScore = 50 - defRating/2;
-  const roll = Math.random()*100;
+  const oncourt = S.roster.filter(p=>p.onCourt);
+  const oppRtg = getOppOffRating();
+  // Opponent always dangerous
+  const scoreProb = 0.38 + (oppRtg - 68) * (0.14/20);
+  const roll = Math.random();
 
-  if(roll > 100-baseOppScore*0.15){
-    const pts = roll>96?3:roll>72?2:2;
-    const oncourt = S.roster.filter(p=>p.onCourt);
+  if(roll < scoreProb){
+    const is3 = Math.random()<0.28;
+    const pts = is3?3:2;
     oncourt.forEach(p=>p.stats.plusminus-=pts);
-    lg.oppScore += pts;
-    
-    // Defensive stats
-    if(Math.random()<0.15){
-      const stealer = pickWeighted(oncourt, p=>p.ovr);
-      if(stealer) stealer.stats.stl++;
+    lg.oppScore+=pts;
+    lg.momentum=Math.max(0,(lg.momentum||50)-(is3?6:3));
+    flashScore();
+
+    // Def stats on opp makes
+    if(Math.random()<0.10){
+      const st=pickWeighted(oncourt,p=>p.ovr);
+      if(st){st.stats.stl++;updatePlayerStats(st,{stl:1});}
     }
-    if(Math.random()<0.08){
-      const blocker = S.roster.filter(p=>p.onCourt&&['PF','C'].includes(p.pos));
-      if(blocker.length){
-        const bl = pick(blocker);
-        bl.stats.blk++;
+    if(Math.random()<0.07){
+      const blks=oncourt.filter(p=>['PF','C'].includes(p.pos));
+      if(blks.length){const bl=pick(blks);bl.stats.blk++;updatePlayerStats(bl,{blk:1});}
+    }
+    if(Math.random()<0.18) addLog(`${ROSTERS[lg.opp].abbr} ${is3?'THREE':'scores'} ${pts}pts (${lg.oppScore} total)`,'opp');
+
+  } else if(roll < scoreProb+0.12){
+    // Opp turnover — steal chance
+    if(Math.random()<0.30){
+      const st=pickWeighted(oncourt,p=>p.ovr);
+      if(st){st.stats.stl++;updatePlayerStats(st,{stl:1});}
+    }
+  } else {
+    // Opp miss — defensive rebound
+    const bigs=oncourt.filter(p=>['PF','C'].includes(p.pos));
+    if(Math.random()<0.72){
+      // We get the defensive board
+      const reb = bigs.length ? pickWeighted(bigs,p=>p.ovr) : pickWeighted(oncourt,p=>p.ovr);
+      if(reb){
+        reb.stats.reb++;
+        updatePlayerStats(reb,{reb:1});
+        const tdReb=checkTripleDouble(reb);
+        if(tdReb) addLog(`🔥 ${reb.name.split(' ').pop()} has a TRIPLE DOUBLE!`,'qtr');
       }
     }
-    
-    if(Math.random()<0.12) addLog(`${lg.opp.split(' ').pop()} scores ${pts}pts (${lg.oppScore} total)`, 'opp');
-  } else {
-    // Defensive rebound
-    const oncourt = S.roster.filter(p=>p.onCourt);
-    const bigs = oncourt.filter(p=>['PF','C'].includes(p.pos));
-    if(bigs.length && Math.random()>0.4){
-      const reb = pick(bigs);
-      reb.stats.reb++;
+    if(Math.random()<0.06){
+      const blks=oncourt.filter(p=>['PF','C'].includes(p.pos));
+      if(blks.length){const bl=pick(blks);bl.stats.blk++;updatePlayerStats(bl,{blk:1});}
     }
   }
+}
+
+function checkTripleDouble(p){
+  return p.stats.pts>=10 && p.stats.reb>=10 && p.stats.ast>=10 && !p._tdAnnounced && (p._tdAnnounced=true);
 }
 
 function pickWeighted(arr, weightFn){
@@ -1536,6 +1765,7 @@ function updatePlayerStats(player, stats){
   const ps = S.playerStats[player.name];
   Object.entries(stats).forEach(([k,v])=>{ if(ps[k]!==undefined) ps[k]+=v; });
 }
+
 
 function showHalftime(){
   const lg = S.liveGame;
@@ -1557,6 +1787,9 @@ function showHalftime(){
       <div style="font-size:13px;color:${getAvgStamina()>60?'var(--green)':'var(--accent)'};">${getAvgStamina().toFixed(0)}% avg stamina</div>
     </div>
   `;
+  const topScorers = [...S.roster].sort((a,b)=>b.stats.pts-a.stats.pts).slice(0,3);
+  const htTop = document.getElementById('ht-top-scorers');
+  if(htTop) htTop.innerHTML = topScorers.map(p=>`<div style="text-align:center;">${makeAvatar(p.name,'sm')}<div style="font-size:11px;font-weight:600;margin-top:5px;">${p.name.split(' ').pop()}</div><div style="font-family:var(--fd);font-size:20px;font-weight:800;color:var(--accent);">${p.stats.pts}</div><div style="font-size:10px;color:var(--muted);">pts</div></div>`).join('');
   document.getElementById('halftime-modal').classList.add('show');
 }
 
@@ -1668,20 +1901,7 @@ function endGame(){
   updateTopbar();
   toast(`${won?'WIN':'LOSS'}! Final: ${lg.myScore}-${lg.oppScore} vs ${ROSTERS[lg.opp].abbr}`);
 
-  setTimeout(()=>{
-    const advBtn = document.getElementById('advance-btn');
-    const simHalfBtn = document.getElementById('sim-half-btn');
-    const simFullBtn = document.getElementById('sim-full-btn');
-    advBtn.textContent = '▶ Next Game';
-    advBtn.disabled = false;
-    advBtn.onclick = ()=>nav('dashboard');
-    simHalfBtn.textContent = '🏠 Dashboard';
-    simHalfBtn.disabled = false;
-    simHalfBtn.onclick = ()=>nav('dashboard');
-    simFullBtn.textContent = '🏠 Dashboard';
-    simFullBtn.disabled = false;
-    simFullBtn.onclick = ()=>nav('dashboard');
-  },1500);
+  setTimeout(()=>{ showGameOver(won, lg); }, 1200);
 }
 
 function updateStandings(won, lg){
@@ -1713,13 +1933,183 @@ function updateStandings(won, lg){
   });
 }
 
+
+function showGameOver(won, lg){
+  const myAbbr = ROSTERS[S.team].abbr;
+  const oppAbbr = ROSTERS[lg.opp].abbr;
+  const titleEl = document.getElementById('go-title');
+  titleEl.textContent = won ? 'VICTORY' : 'DEFEAT';
+  titleEl.style.color = won ? 'var(--green)' : 'var(--red)';
+  document.getElementById('go-score').textContent = (lg.isHome ? lg.myScore : lg.oppScore) + ' – ' + (lg.isHome ? lg.oppScore : lg.myScore);
+  document.getElementById('go-sub').textContent = myAbbr + ' vs ' + oppAbbr + ' · Game ' + S.gamesPlayed + ' of 82';
+  const top = [...S.roster].sort((a,b)=>b.stats.pts-a.stats.pts).slice(0,3);
+  document.getElementById('go-stats').innerHTML = '<div style="font-size:12px;color:var(--muted);margin-bottom:10px;">Top Performers</div><div style="display:flex;gap:14px;justify-content:center;">' +
+    top.map(p=>'<div style="text-align:center;">' + makeAvatar(p.name,'sm') + '<div style="font-size:11px;font-weight:600;margin-top:5px;">' + p.name.split(' ').pop() + '</div><div style="font-family:var(--fd);font-size:20px;font-weight:800;color:var(--accent);">' + p.stats.pts + '</div><div style="font-size:10px;color:var(--muted);">' + p.stats.reb + 'r · ' + p.stats.ast + 'a</div></div>').join('') + '</div>';
+  const nextBtn = document.getElementById('go-next-btn');
+  if(S.gamesPlayed >= 82){ nextBtn.textContent = 'Season Complete'; }
+  else { nextBtn.textContent = '▶ Next Game'; }
+  nextBtn.onclick = ()=>{ closeGameOver(); nav('dashboard'); };
+  document.getElementById('gameover-modal').classList.add('show');
+}
+
+function closeGameOver(){
+  document.getElementById('gameover-modal').classList.remove('show');
+  const advBtn = document.getElementById('advance-btn');
+  const simHalfBtn = document.getElementById('sim-half-btn');
+  const simFullBtn = document.getElementById('sim-full-btn');
+  advBtn.textContent = '▶ Advance'; advBtn.disabled = false; advBtn.onclick = ()=>advanceGame();
+  simHalfBtn.textContent = '⏩ Sim Half'; simHalfBtn.disabled = false; simHalfBtn.onclick = ()=>simToHalf();
+  simFullBtn.textContent = '⏭ Sim to End'; simFullBtn.disabled = false; simFullBtn.onclick = ()=>simToEnd();
+  document.getElementById('live-indicator').style.display = '';
+}
+
+
+// ===================== TRADE SYSTEM =====================
+let tradeMyPlayer = null;
+let tradeOppPlayer = null;
+
+function renderTradeScreen(){
+  if(!S.team) return;
+  // Populate team select
+  const sel = document.getElementById('trade-team-select');
+  const teams = Object.keys(ROSTERS).filter(t=>t!==S.team).sort();
+  sel.innerHTML = teams.map(t=>`<option value="${t}">${t}</option>`).join('');
+  tradeMyPlayer = null; tradeOppPlayer = null;
+  renderTradeMyRoster();
+  renderTradeOppRoster();
+  updateTradeUI();
+}
+
+function renderTradeMyRoster(){
+  const el = document.getElementById('trade-my-roster');
+  if(!el) return;
+  el.innerHTML = S.roster.map(p=>{
+    const ovrCls = p.ovr>=88?'ovr-elite':p.ovr>=78?'ovr-good':'ovr-avg';
+    const sel = tradeMyPlayer && tradeMyPlayer.name===p.name;
+    return `<div onclick="selectTradePlayer('my','${p.name.replace(/'/g,"\'")}')" style="display:flex;align-items:center;gap:8px;padding:6px 10px;border-bottom:1px solid var(--border);cursor:pointer;background:${sel?'rgba(245,166,35,0.1)':'transparent'};transition:background 0.1s;">
+      <span class="pos-badge pos-${p.pos}">${p.pos}</span>
+      <span style="flex:1;font-size:12px;font-weight:${sel?700:500};">${p.name}</span>
+      <span class="ovr-badge ${ovrCls}">${p.ovr}</span>
+      <span style="font-size:11px;color:var(--muted);">${p.ppg}p</span>
+      ${sel?'<span style="color:var(--accent);font-size:14px;">✓</span>':''}
+    </div>`;
+  }).join('');
+}
+
+function renderTradeOppRoster(){
+  const el = document.getElementById('trade-opp-roster');
+  const sel_team = document.getElementById('trade-team-select');
+  if(!el||!sel_team) return;
+  const team = sel_team.value;
+  if(!team||!ROSTERS[team]) return;
+  const players = ROSTERS[team].players.map((p,i)=>({name:p[0],pos:p[1],ovr:p[2],ppg:p[3]}));
+  el.innerHTML = players.map(p=>{
+    const ovrCls = p.ovr>=88?'ovr-elite':p.ovr>=78?'ovr-good':'ovr-avg';
+    const selp = tradeOppPlayer && tradeOppPlayer.name===p.name;
+    return `<div onclick="selectTradePlayer('opp','${p.name.replace(/'/g,"\'")}')" style="display:flex;align-items:center;gap:8px;padding:6px 10px;border-bottom:1px solid var(--border);cursor:pointer;background:${selp?'rgba(34,197,94,0.1)':'transparent'};transition:background 0.1s;">
+      <span class="pos-badge pos-${p.pos}">${p.pos}</span>
+      <span style="flex:1;font-size:12px;font-weight:${selp?700:500};">${p.name}</span>
+      <span class="ovr-badge ${ovrCls}">${p.ovr}</span>
+      <span style="font-size:11px;color:var(--muted);">${p.ppg}p</span>
+      ${selp?'<span style="color:var(--green);font-size:14px;">✓</span>':''}
+    </div>`;
+  }).join('');
+}
+
+function selectTradePlayer(side, name){
+  if(side==='my'){
+    const p = S.roster.find(pl=>pl.name===name);
+    if(!p) return;
+    tradeMyPlayer = tradeMyPlayer&&tradeMyPlayer.name===name ? null : p;
+  } else {
+    const sel_team = document.getElementById('trade-team-select');
+    if(!sel_team) return;
+    const team = sel_team.value;
+    const raw = ROSTERS[team].players.find(pl=>pl[0]===name);
+    if(!raw) return;
+    const p = {name:raw[0],pos:raw[1],ovr:raw[2],ppg:raw[3],rpg:raw[4],apg:raw[5],fgp:raw[6],p3:raw[7],ftp:raw[8],stamina:100,fouls:0,starter:false,onCourt:false,stats:{pts:0,reb:0,ast:0,stl:0,blk:0,to:0,mins:0,plusminus:0,fga:0,fgm:0,fta:0,ftm:0,p3a:0,p3m:0}};
+    tradeOppPlayer = tradeOppPlayer&&tradeOppPlayer.name===name ? null : p;
+  }
+  renderTradeMyRoster();
+  renderTradeOppRoster();
+  updateTradeUI();
+}
+
+function updateTradeUI(){
+  document.getElementById('trade-my-offer').textContent = tradeMyPlayer ? tradeMyPlayer.name+' ('+tradeMyPlayer.ovr+' OVR)' : 'None selected';
+  document.getElementById('trade-opp-offer').textContent = tradeOppPlayer ? tradeOppPlayer.name+' ('+tradeOppPlayer.ovr+' OVR)' : 'None selected';
+  document.getElementById('trade-result').textContent = '';
+}
+
+function clearTrade(){
+  tradeMyPlayer = null; tradeOppPlayer = null;
+  renderTradeMyRoster(); renderTradeOppRoster(); updateTradeUI();
+}
+
+function proposeTrade(){
+  if(!tradeMyPlayer||!tradeOppPlayer){toast('Select one player from each team first.');return;}
+  const res = document.getElementById('trade-result');
+
+  // AI acceptance logic — team accepts if they're getting value
+  const myOvr = tradeMyPlayer.ovr;
+  const oppOvr = tradeOppPlayer.ovr;
+  const diff = myOvr - oppOvr; // positive = we're offering more
+  
+  // Accept if within 5 OVR range in their favour, or random chance for close trades
+  let accepted = false;
+  if(diff >= -2) {
+    // We're offering equal or better — likely accepted
+    accepted = Math.random() < 0.80;
+  } else if(diff >= -6){
+    // Slight overpay from them — 40% chance
+    accepted = Math.random() < 0.40;
+  } else {
+    // Big overpay from them — very unlikely
+    accepted = Math.random() < 0.12;
+  }
+
+  if(accepted){
+    // Execute trade: remove my player, add opp player
+    const myIdx = S.roster.findIndex(p=>p.name===tradeMyPlayer.name);
+    if(myIdx === -1){ toast('Trade error: player not found.'); return; }
+    
+    // Set the incoming player's starter status to match the outgoing player
+    tradeOppPlayer.starter = S.roster[myIdx].starter;
+    tradeOppPlayer.onCourt = false;
+    S.roster.splice(myIdx, 1, tradeOppPlayer);
+    S.starters = S.roster.filter(p=>p.starter);
+    S.bench = S.roster.filter(p=>!p.starter);
+
+    // Init season stats for new player
+    if(!S.playerStats[tradeOppPlayer.name]){
+      S.playerStats[tradeOppPlayer.name]={gp:0,pts:0,reb:0,ast:0,stl:0,blk:0,fgm:0,fga:0,ftm:0,fta:0,p3m:0,p3a:0};
+    }
+
+    res.innerHTML = '<span style="color:var(--green);font-weight:700;">✓ TRADE ACCEPTED! '+tradeOppPlayer.name+' joins your team.</span>';
+    toast('Trade completed! '+tradeOppPlayer.name+' is now on your roster.');
+    tradeMyPlayer = null; tradeOppPlayer = null;
+    renderTradeMyRoster();
+    renderTradeOppRoster();
+    updateTradeUI();
+    updateTopbar();
+  } else {
+    const reasons = [
+      'Trade rejected — they value '+tradeMyPlayer.name+' too highly.',
+      'Trade rejected — not enough value offered.',
+      'Trade rejected — team not interested in trading '+tradeOppPlayer.name+'.',
+      'Trade rejected — front office declined the offer.',
+    ];
+    res.innerHTML = '<span style="color:var(--red);">✗ '+reasons[Math.floor(Math.random()*reasons.length)]+'</span>';
+  }
+}
+
 // ===================== NAVIGATION =====================
 function nav(id){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
   document.getElementById(`screen-${id}`).classList.add('active');
   document.querySelectorAll('.nav-item').forEach(n=>{
     n.classList.remove('active');
-    if(n.getAttribute('onclick') && n.getAttribute('onclick').includes(`'${id}'`)){
+    if(n.getAttribute('onclick') && n.getAttribute('onclick').includes("'" + id + "'")){
       n.classList.add('active');
     }
   });
@@ -1730,6 +2120,7 @@ function nav(id){
   if(id==='schedule') renderSchedule();
   if(id==='standings') renderStandings();
   if(id==='stats') renderStats();
+  if(id==='trade') renderTradeScreen();
   if(id==='pick'){ document.getElementById('sidebar').style.display='none'; document.getElementById('tb-info').style.display='none'; renderPickScreen(); }
   if(id==='live') renderLiveUI();
 }
